@@ -1,0 +1,59 @@
+Iterators:
+An iterator in Python is an object that allows you to traverse through all the elements of a collection, such as a list or a tuple, one at a time.
+Iterators implement two methods:
+1. __iter__() - Returns the iterator object itself and is implicitly called at the start of loops.
+2. __next__() - Returns the next item from the collection. If no more items are available, it raises a StopIteration exception.
+
+Iterators are useful in any situation where you want to efficiently manage memory, process large or infinite data streams, customize iteration logic, or manage resources properly.
+They provide powerful tools for building flexible, reusable, and scalable code in Python.
+
+Example of an Iterator:
+numbers = [1, 2, 3, 4]
+iter_obj = iter(numbers)  # Creating an iterator object
+
+print(next(iter_obj))  # Output: 1
+print(next(iter_obj))  # Output: 2
+print(next(iter_obj))  # Output: 3
+print(next(iter_obj))  # Output: 4
+print(next(iter_obj))  # Raises StopIteration
+
+When to use Iterators
+1. Handling Large Datasets - Use Case: Reading logs, CSV files, or other large datasets efficiently without memory overflow.
+2. Lazy Evaluation - Iterators allow for lazy evaluation, meaning values are computed only when needed
+3. Custom Iteration Logic
+4. Data Streams and Pipelines - Iterators are ideal for processing data streams or pipelines where data is processed in a step-by-step manner.
+For example, processing a stream of sensor data, log data, or HTTP requests.
+5. Database Query Results - When querying a database, results are often returned as an iterator, allowing you to process large sets of results efficiently without loading all results into memory.
+6. Resource Management - Iterators can help manage resources by ensuring that objects like files, database connections, or network sockets are opened and closed properly.
+
+Generators:
+Generators are a simple way of creating iterators using a function rather than a class.
+Generators are most useful when you want to handle data in a lazy, memory-efficient, and readable way, especially for sequences, streams, and pipelines.
+They allow you to iterate through a sequence of values lazily (one at a time) without storing the entire sequence in memory.
+This is especially useful for large datasets or streams of data.
+Generators are written using a function, but instead of return, they use yield to yield values one by one.
+
+Generator Expressions
+Generator expressions are a concise way to create generators, similar to list comprehensions but with parentheses instead of square brackets.
+They are useful when you want to iterate through a sequence without creating and storing the entire list in memory.
+
+When to use generator:
+1. Handling Large Data Sets - Example: Reading a large file line by line without loading the entire file into memory.
+2. Lazy Evaluation - Example: Generating Fibonacci numbers until a condition is met.
+3. Memory Efficiency - Example: Generating the squares of numbers without storing them in a list.
+4. Improving Performance for Pipeline Processing - Example: Processing data in stages.
+5. Creating Infinite Sequences
+6. Generating Infinite Streams of Data
+7. Improving Code Readability
+8. Reducing Boilerplate Code
+When Not to Use Generators
+1. When the entire data set needs to be accessed repeatedly.
+2. When random access to elements is required (e.g., indexing).
+3. When you need to manipulate or modify the data set in place.
+
+
+------------------------
+Use Iterators when you need more control over the iteration process or need to create complex iteration patterns that cannot be easily achieved with a generator.
+Use Generators when you need to iterate over a sequence of data in a memory-efficient way, particularly for large datasets or when you want to represent an infinite stream of data.
+They are simpler, more concise, and more readable for most common use cases.
+

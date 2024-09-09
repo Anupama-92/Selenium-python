@@ -1,0 +1,36 @@
+# Pattern Matching with Regex
+# RegEx module called 're'
+# 're' - Findall, search, spilt, sub
+# re.compile() - compile a regular expression pattern provided as a string into a regex pattern object
+# re.compile(pattern, repl, string) - returns a pattern Object.
+# Regular expressions, also called regex, are descriptions of a pattern of text.
+# It can detect the presence or absence of a text by matching it with a particular pattern and also can split a pattern into one or more sub-patterns.
+# For example, a \d in a regex stands for a digit character — that is, any single numeral between 0 and 9.
+# Check Phone Numbers Using Regex In Python - \d\d\d-\d\d\d-\d\d\d\d
+#  adding a 3 in curly brackets ({3}) after a pattern is like saying, “Match this pattern three times.”
+
+# Parentheses for Grouping and Capturing with Regex
+# One of the ways of pattern matching with Regex is by using Parentheses around the patterns.
+
+
+# Understanding Curly Braces in Regex
+# (Hi){3} will match the string as 'HiHiHi'
+# (Hi){3,5} - 'HiHiHi', 'HiHiHiHi' and 'HiHiHiHiHi'
+# (Hi){3,}  will match with three or more instances
+# (Hi){,4} will match with 0 to 5 instances.
+
+# Optional Operator or question mark (?) in Regular Expression
+# The “?” character flags the group that precedes it as an optional part of the pattern.
+# (wo)? - the pattern wo is an optional group - The regex will match text that has zero instances or one instance of wo in it.
+
+
+# Zero or More Pattern Matching with the Star
+# The * (called the star or asterisk) means “match zero or more” - It can be completely absent or repeated over and over again
+# To match an actual star character, prefix the star in the regular expression with a backslash, \*.
+# (wo)* part of the regex matches zero instances of wo in the string.
+
+
+# One or More Pattern Matching with the Plus
+# * means “match zero or more,” the + (or plus) means “match one or more.”
+# +Plus - the group preceding a plus must appear at least once. It is not optional.
+# To match an actual plus sign character, prefix the plus sign with a backslash to escape it: \+.

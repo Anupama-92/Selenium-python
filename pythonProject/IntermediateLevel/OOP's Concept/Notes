@@ -1,0 +1,34 @@
+The __init__ method allows you to define the initial state of an object by accepting arguments and assigning them to object attributes
+__init__ is a special method in Python classes that is automatically called when a new instance of the class is created.
+When you create an object of a class, Python automatically calls the __init__ method with the arguments provided.
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+Here, __init__ initializes a new instance of the Car class.
+It takes three arguments: self (which refers to the instance itself), brand, and model.
+It assigns the brand and model arguments to the brand and model attributes of the object, respectively.
+
+
+Double Underscores (__):
+In Python, double underscores (__) are used for name mangling and to create special methods or variables.
+When used at the beginning of a name (e.g., __init__, __str__), they denote special methods defined by Python that have special meaning in the context of classes and objects.
+When used at the beginning and end of a name (e.g., __variable__), they are reserved for system-defined names that have a special meaning to the interpreter.
+class Circle:
+    def __init__(self, radius):
+        self.__radius = radius
+
+Here, __radius is a private attribute of the Circle class, denoted by the double underscores at the beginning of its name.
+The use of double underscores in the attribute name indicates that it should not be accessed directly from outside the class. Instead, access should be controlled through getter and setter methods.
+Python performs name mangling on attributes with double underscores, which means the attribute name is internally modified to avoid name clashes in subclasses. However, it does not make the attribute truly private; it just makes accessing it from outside the class more difficult.
+
+-----Polymorphism------
+In this example, both Dog and Cat classes inherit from the Animal class.
+They override the sound() method of the superclass.
+The make_sound() function demonstrates polymorphism by accepting objects of different classes and calling their sound() methods without knowing their specific types.
+
+-----Data Abstraction----
+In this example, the Shape class is an abstract base class (ABC) representing a generic shape.
+It defines an abstract method area() that must be implemented by its subclasses.
+The Circle and Rectangle classes inherit from Shape and provide their implementations of the area() method.
+The internal details of how area() is calculated for each shape are abstracted away, and the user interacts with the objects using a common interface without knowing their specific implementations.
