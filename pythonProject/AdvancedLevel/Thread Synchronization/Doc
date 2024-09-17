@@ -1,0 +1,12 @@
+1. Lock: A Lock allows only one thread to access a shared resource at a time.
+Once a thread acquires the lock, other threads must wait until the lock is released.
+2. RLock (Reentrant Lock): is similar to Lock, but allows a thread to acquire the same lock multiple times without getting blocked.
+It's useful when the same thread might need to lock and unlock a resource multiple times.
+3. Semaphores: A Semaphore is a more flexible locking mechanism that allows a fixed number of threads to access a resource simultaneously.
+For instance, if you want to allow a maximum of two threads to control the browser at a time (useful when working with a limited number of browser instances), a semaphore can help.
+4. Event: An Event is used for signaling between threads. It allows one or more threads to wait until an event is set before continuing.
+
+Use Cases of Thread Synchronization in Selenium:
+1. Concurrent Web Scraping: If you're scraping multiple websites in parallel using multiple threads, you may need to synchronize access to the browser (or shared data) to avoid race conditions.
+2. Test Execution in Parallel: When running Selenium tests in parallel threads, synchronization is needed to ensure test data (like login credentials or test environment settings) isn't corrupted by multiple threads writing to the same resource.
+3. Shared Browser Resources: If multiple threads are using the same browser instance (which is not recommended), thread synchronization is mandatory to prevent issues like multiple threads trying to interact with the same web elements simultaneously.
