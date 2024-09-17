@@ -10,3 +10,11 @@ Use Cases of Thread Synchronization in Selenium:
 1. Concurrent Web Scraping: If you're scraping multiple websites in parallel using multiple threads, you may need to synchronize access to the browser (or shared data) to avoid race conditions.
 2. Test Execution in Parallel: When running Selenium tests in parallel threads, synchronization is needed to ensure test data (like login credentials or test environment settings) isn't corrupted by multiple threads writing to the same resource.
 3. Shared Browser Resources: If multiple threads are using the same browser instance (which is not recommended), thread synchronization is mandatory to prevent issues like multiple threads trying to interact with the same web elements simultaneously.
+
+When to Use Thread Synchronization in Selenium:
+Locks: Use when you need to prevent concurrent access to shared resources, such as the WebDriver.
+Semaphores: Useful when you need to limit the number of threads that can run a task concurrently.
+Conditions: Ideal for cases where threads need to coordinate with each other and wait for certain conditions to be true.
+Events: A simple signaling mechanism between threads, useful when one thread needs to wait for a signal from another.
+
+By using these synchronization techniques, you can manage multithreading in Selenium, ensuring that the WebDriver instances don't clash and avoiding issues like resource contention.
