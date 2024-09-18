@@ -1,0 +1,14 @@
+A mixin is a class that provides additional functionality to other classes through inheritance, without being the primary base class.
+Mixins typically don’t stand on their own; they are meant to be "mixed" into other classes to add specific functionality.
+
+Purpose of Mixins:
+To promote code reuse by adding methods to other classes.
+To avoid deep inheritance hierarchies.
+To separate concerns, focusing on one feature at a time.
+
+Multiple Inheritance
+In Python, a class can inherit from more than one class, which is called multiple inheritance.
+Python uses a method resolution order (MRO) to determine how methods are inherited in the case of multiple parent classes.
+Syntax:
+class ChildClass(ParentClass1, ParentClass2):
+    pass

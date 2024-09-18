@@ -1,0 +1,12 @@
+Use unittest when you need a traditional testing framework and prefer explicit test case definitions and setups.
+Use pytest when you want simplicity, less boilerplate, and more powerful features like fixtures, parameterization, and plugins.
+
+Differences Between unittest and pytest
+Feature	                        unittest	                                                 pytest
+Setup/Teardown	         Uses setUp()/tearDown()	                              Uses fixtures, more flexible
+Test discovery	         Discovers only methods in TestCase classes	              Discovers any method prefixed with test_
+Assertions	             Uses specific assertX methods	                          Uses plain assert keyword
+Parameterization	     Requires additional boilerplate                          Native support via @pytest.mark.parametrize
+Extensibility	         Less extensible	                                      Highly extensible with plugins
+Output readability	     Verbose test output	                                  Clean and concise output
+Ease of use	             Requires more boilerplate	                              Simpler and more concise
