@@ -28,3 +28,13 @@ It provides additional features like syntax highlighting and tab completion.
 pudb: Another third-party debugger with a full-screen, terminal-based interface.
 It gives you an overview of code, variables, and the stack in a more user-friendly manner.
 
+Summary of Tools and Techniques:
+Print Statements: Quick and simple but can clutter the code.
+Assertions: For sanity checks and quick debugging.
+pdb: Python’s built-in interactive debugger.
+IDE Debugging Tools: Full-featured debugging environments.
+Logging: A more robust alternative to print statements.
+Third-Party Debuggers: Enhanced debugging experiences with tools like ipdb and pudb.
+Post-mortem Debugging: Analyze crashes after they occur.
+Profiling: For performance-related debugging using cProfile and timeit.
+Static Code Analysis: Tools like pylint and flake8 for error checking and code quality.

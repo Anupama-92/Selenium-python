@@ -8,4 +8,9 @@ def add(a, b):
 
 result = add(5, 3)
 
+import pudb
+
+def add(a, b):
+    pudb.set_trace()  # Full-screen terminal debugger
+    return a + b
 
