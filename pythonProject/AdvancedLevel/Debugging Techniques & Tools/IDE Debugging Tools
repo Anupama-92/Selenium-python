@@ -1,0 +1,10 @@
+ IDE Debugging Tools
+Most modern Integrated Development Environments (IDEs) like PyCharm, VSCode, Eclipse with PyDev, and Spyder come with powerful built-in debugging tools. These tools offer:
+
+Breakpoints: Set breakpoints in your code to pause execution at a specific line.
+Watch Variables: Track variables and inspect their values as the code runs.
+Step Over/Into/Out: Step through the code line by line, enter function calls, or skip them.
+Call Stack: View the sequence of function calls that led to a particular point in the program.
+Example (VSCode Debugger):
+Add breakpoints by clicking next to the line number.
+Start the debugger and step through the code, inspect variables, and view the call stack.

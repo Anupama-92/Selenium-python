@@ -1,0 +1,30 @@
+Built-in Debugger: pdb
+Python has a built-in interactive debugger called pdb that allows step-by-step execution of the code, inspecting variables, and setting breakpoints.
+Key Commands in pdb:
+break or b: Set a breakpoint at a specific line or function.
+
+continue or c: Continue execution until the next breakpoint.
+
+step or s: Step into a function call.
+
+next or n: Execute the next line of code without stepping into functions.
+
+list or l: List the code around the current line.
+
+print or p: Print the value of a variable.
+
+-----Logging------
+# Logging is a more flexible alternative to print statements and allows you to log messages at different severity levels (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL).
+Advantages of Logging:
+
+Control the verbosity of your messages by setting different log levels.
+Log output can be directed to files, making it easier to trace and analyze later.
+
+
+-----ipdb------------------
+This is an enhanced version of pdb that integrates with IPython.
+It provides additional features like syntax highlighting and tab completion.
+-----pudb--------------
+pudb: Another third-party debugger with a full-screen, terminal-based interface.
+It gives you an overview of code, variables, and the stack in a more user-friendly manner.
+
