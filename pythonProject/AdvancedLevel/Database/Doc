@@ -1,0 +1,31 @@
+Common Database Libraries in Python
+Some of the most commonly used libraries for interacting with relational databases are:
+
+SQLite (built-in)
+Python has a built-in library called "sqlite3" to work with SQLite databases.
+MySQL: You can use mysql-connector-python or "PyMySQL" libraries to interact with MySQL databases.
+PostgreSQL: You can use the "psycopg2" library to interact with PostgreSQL databases.
+
+SQLite in Python
+Basic Steps for SQLite Database Operations:
+Connect to a database: If the database does not exist, it will be created.
+Create a cursor: A cursor allows us to execute SQL commands.
+Execute SQL commands: Perform operations like SELECT, INSERT, UPDATE, etc.
+Commit the transaction: To save the changes made to the database.
+Close the connection: Always close the connection to release resources.
+
+SQL Queries and Commands
+select Query
+cursor.execute("SELECT * FROM users WHERE age > ?", (25,))
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+Insert Query
+cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ('Charlie', 28))
+conn.commit()
+Update Query
+cursor.execute("UPDATE users SET age = ? WHERE name = ?", (35, 'Alice'))
+conn.commit()
+Delete Query
+cursor.execute("DELETE FROM users WHERE name = ?", ('Charlie',))
+conn.commit()
