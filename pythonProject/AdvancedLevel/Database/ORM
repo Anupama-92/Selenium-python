@@ -1,0 +1,20 @@
+Object-Relational Mapping (ORM) is a programming technique used to map data between a relational database and an object-oriented language like Python. Instead of writing raw SQL queries, ORMs allow developers to interact with the database using Python objects and methods, making database management more intuitive and abstracting the underlying SQL complexity.
+Using ORM in Selenium can help manage test data more effectively and cleanly by working with databases using Python objects
+
+
+How ORMs Work
+ORMs provide a layer of abstraction on top of SQL databases.
+We define Python classes for your database tables, and these classes are mapped to the corresponding tables in the database.
+Python objects represent rows, and their attributes represent the columns in the table.
+
+Benefits of using ORM in selenium
+1. Maintainability
+2. Reduced Boiler plate Code
+3. Database Independent
+4. Integrated test suites - When working with Selenium, you often need to interact with databases for managing test data.
+ORMs make this easier to manage, especially when running automated tests that involve querying and asserting against data in a database.
+
+ORM in Real Selenium Use Cases
+Test Data Setup: Instead of writing SQL insert scripts to populate test data, you can create Python objects to represent database records and use them in tests.
+Assertions: After performing certain actions on the website, you can verify changes in the database using ORM queries.
+Test Cleanup: After running tests, you can easily delete or reset the test data in the database.

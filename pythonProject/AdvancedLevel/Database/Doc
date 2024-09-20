@@ -30,7 +30,7 @@ Delete Query
 cursor.execute("DELETE FROM users WHERE name = ?", ('Charlie',))
 conn.commit()
 
-SQL libaries in Python - pyodbc & pymssql
+SQL libraries in Python - pyodbc & pymssql
 Difference between is
 pyodbc: More versatile as it works with multiple databases, including SQL Server, MySQL, and others, through ODBC drivers. Ideal for working with ODBC.
 pymssql: A lightweight wrapper around the native SQL Server client libraries. It is easier to set up but lacks some features of pyodbc.
