@@ -1,0 +1,33 @@
+A software design pattern is a general, reusable solution to a commonly occuring problem within a given context in software design
+Design Pattern are three types
+1. Creational(Polymorphism) - Create Objects systematically.
+2. Structural(Inheritance) - Establish relationships between software components.Accomplish functional and non functional goals.
+3. Behavioral(Methods) - Objects interaction
+
+Pattern  Context
+1. Participants - Classes involved to form a design pattern, Roles
+2. Quality Attributes - Non functional requirements, reliability and performance. It effects on the entire software architectural solutions
+3. Forces
+4. Consequences - Worse performance
+
+Pattern language
+1. Name
+2. Context
+3. Problem
+4. Solution
+5. Related patterns
+
+Types of patterns
+1. Factory Pattern - Factory encapulates object creation.
+When we use
+Uncertainites in types of objects
+Decision to be made at run time regarding what classes to use
+2. Abstract Factory - Builds on Factory parent
+When we use - When the user expects to receive a family of related objects but don't know which family it is untill run time
+Abstract Factory - pet factory
+Concrete Factory - dog and cat category
+Concrete Product -
+    DOg and dog food
+    Cat and cat food
+
+
