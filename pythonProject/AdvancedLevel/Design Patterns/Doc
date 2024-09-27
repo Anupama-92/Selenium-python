@@ -18,9 +18,9 @@ Pattern language
 5. Related patterns
 
 Types of patterns
-1. Factory Pattern - Factory encapulates object creation.
+1. Factory Pattern - Factory encapsulates object creation.
 When we use
-Uncertainites in types of objects
+Uncertainties in types of objects
 Decision to be made at run time regarding what classes to use
 2. Abstract Factory - Builds on Factory parent
 When we use - When the user expects to receive a family of related objects but don't know which family it is untill run time
@@ -30,4 +30,29 @@ Concrete Product -
     DOg and dog food
     Cat and cat food
 
+Page Object Model (POM) - Use POM when the UI frequently changes, as it keeps the code clean and readable.
+Factory Design Pattern - Use Factory when the project needs to support multiple browsers or page types that are instantiated dynamically based on input conditions.
+Singleton - Use Singleton when you want to limit the WebDriver instance to one per test suite or test run.
+Strategy -  Use Strategy when you have different actions or workflows that can vary and you want the flexibility to switch between them.
+Decorator - Use Decorator when you want to enhance or modify the behavior of existing methods dynamically, like adding logging, screenshot capturing, or retry mechanisms.
+Command - Use Command if you want to encapsulate user actions and execute them in a more structured or deferred way, particularly for complex workflows.
+Observer - Use Observer when you need multiple components to react to test events such as test failures, retries, or specific actions.
+
+
+How to Choose the Right Design Pattern:
+1. Project Size and Complexity:
+
+Small projects: Start with Page Object Model (POM).
+Large projects: Consider combining POM with Factory, Singleton, or Strategy patterns to enhance flexibility and maintainability.
+Test Suite Goals:
+
+2. Maintainability: Use POM to organize test logic.
+Scalability: Combine Factory, Strategy, or Command for extensibility.
+Performance: Use Singleton for managing WebDriver instances efficiently.
+3.Reusability:
+
+Use Decorator or Command patterns to add or reuse test actions without modifying existing methods.
+4. Customization:
+
+Observer or Strategy is helpful if you need dynamic behavior or multiple reactions to test events (e.g., logging, reporting).
 
