@@ -28,3 +28,15 @@
         The * wildcard can be used when the tag name is not known or variable.
         //*[@id='submit']    // Matches any element with the ID 'submit'
 
+
+Using Axes:
+//div[@class='product']/following-sibling::div[@class='description']   // Selects the div with class 'description' that follows a div with class 'product'
+
+Using XPath Functions:
+
+normalize-space(): Removes leading and trailing spaces from text.
+contains(): Checks if an attribute contains a specified substring.
+starts-with(): Checks if an attribute starts with a specified substring
+
+//button[normalize-space(text())='Submit']   // Selects a button with text 'Submit', ignoring leading or trailing spaces
+
