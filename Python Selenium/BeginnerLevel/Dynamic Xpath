@@ -1,0 +1,30 @@
+1. Use Contains to Handle Dynamic Attributes:
+    Use the contains() function to match parts of an attribute when IDs or classes are partially dynamic.
+    //button[contains(@id, 'submit')]     // Matches any button whose ID contains the word 'submit'
+   //div[contains(@class, 'alert')]      // Matches any div whose class contains 'alert'
+
+2. Use Starts-With to Match Partial Attributes:
+        Use the starts-with() function to match the beginning of an attribute.
+        //input[starts-with(@id, 'username_')]    // Matches any input field whose ID starts with 'username_'
+
+3. Use Text to Handle Dynamic Text:
+        If an element’s text might change partially or you need to match only part of the text, use contains() with text().
+        //a[contains(text(), 'Read More')]    // Matches any anchor (`<a>`) element containing the text 'Read More'
+
+4. Use OR Conditions for Multiple Matches:
+        Combine multiple conditions using the or operator when you want to match elements based on different criteria.
+        //button[@type='submit' or @type='button']   // Matches buttons with type 'submit' or 'button'
+
+
+5. Use Parent-Child Relationship:
+        Use // or / to specify parent-child relationships, and .. to move up to a parent element.
+        //div[@class='container']//a[text()='Login']    // Finds an anchor with text 'Login' within a div of class 'container'
+
+6. Use Indexing for Specific Elements:
+        Use indexes to select specific elements from a group of similar elements.
+        (//div[@class='product-item'])[2]   // Selects the second div with class 'product-item'
+
+7. Use Wildcards for Flexible Matching:
+        The * wildcard can be used when the tag name is not known or variable.
+        //*[@id='submit']    // Matches any element with the ID 'submit'
+
