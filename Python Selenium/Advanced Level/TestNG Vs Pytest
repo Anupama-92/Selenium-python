@@ -1,0 +1,94 @@
+1. Annotations (Decorators in Python)
+Test Method:
+In TestNG: @Test
+In pytest: No specific annotation is needed. Every method that starts with test_ is treated as a test method.
+
+import pytest
+
+def test_sample():
+    assert 1 + 1 == 2
+
+Before and After Test Execution:
+In TestNG: @BeforeMethod, @AfterMethod
+In pytest: @pytest.fixture can be used for setup and teardown.
+
+@pytest.fixture
+def setup_teardown():
+    print("Setup code before the test.")
+    yield
+    print("Teardown code after the test.")
+
+def test_example(setup_teardown):
+    assert 2 * 2 == 4
+
+2. Test Suites and Test Cases
+In TestNG: You create XML files to define suites.
+In pytest: Group tests in a class or module.
+
+class TestMathOperations:
+
+    def test_addition(self):
+        assert 1 + 1 == 2
+
+    def test_multiplication(self):
+        assert 2 * 2 == 4
+
+3. Parameterization
+TestNG supports running tests with multiple sets of data using the @DataProvider annotation.
+In Python, pytest provides parameterization with the @pytest.mark.parametrize decorator.
+
+4. Dependency Test
+TestNG allows tests to depend on other tests using the dependsOnMethods feature.
+In Python, you can use the pytest-dependency plugin to achieve this.
+
+import pytest
+
+@pytest.mark.dependency()
+def test_first():
+    assert True
+
+@pytest.mark.dependency(depends=["test_first"])
+def test_second():
+    assert True
+
+5. Parallel Execution
+TestNG supports running tests in parallel using the parallel attribute in the suite XML file.
+In pytest, parallel execution can be achieved using the pytest-xdist plugin.
+
+6. Test Reporting
+TestNG provides HTML and XML reporting out of the box.
+In Python, pytest can generate reports through plugins like pytest-html and pytest-junitxml.
+
+7. Skipping and Ignoring Tests
+TestNG allows tests to be skipped based on certain conditions using the @Test(enabled = false) annotation.
+In pytest, tests can be skipped using @pytest.mark.skip or @pytest.mark.skipif.
+@pytest.mark.skip(reason="Not ready for testing")
+def test_feature_not_ready():
+    assert False
+
+@pytest.mark.skipif(condition=True, reason="Feature under development")
+def test_feature_conditional():
+    assert True
+
+
+8. Assertions
+In TestNG, assertions are made using Assert.assertEquals(), etc.
+In Python's pytest, assertions are done using Python’s native assert keyword.
+
+def test_assert_example():
+    assert 2 + 2 == 4
+
+
+Comparison: TestNG vs. Python's pytest
+Feature                   	TestNG (Java)	                          pytest (Python)
+Test Annotations	      @Test, @BeforeMethod, etc.	               No annotations, uses test_ naming and fixtures
+Test Suites	              Defined via XML	                           Defined via classes, modules, or command-line
+Parameterization	      @DataProvider	                               @pytest.mark.parametrize
+Dependency Tests	      dependsOnMethods	                           pytest-dependency plugin
+Parallel Execution	      Built-in via XML config	                   pytest-xdist plugin
+Reports	                  HTML, XML built-in	                       pytest-html, pytest-junitxml plugins
+Assertions	              Assert class	                               Native assert
+
+
+Although TestNG is not directly available in Python, pytest offers equivalent or even more flexibility and ease of use for writing tests, executing them, handling dependencies, generating reports, and parallel execution. 
+By utilizing Python's pytest, you can implement TestNG-like functionality for your Python projects with minimal effort.

@@ -1,0 +1,25 @@
+Definition: A Hybrid Framework is a combination of multiple frameworks, typically integrating Data-Driven, Keyword-Driven, and Modular frameworks. It leverages the benefits of each framework, making it more flexible and powerful.
+
+How it Works:
+
+The Hybrid Framework integrates data-driven testing with keyword-driven techniques, along with reusable code modules (like POM - Page Object Model).
+Data-Driven component handles the separation of test data from scripts, allowing different test cases to run with various inputs.
+Keyword-Driven component allows the tester to define test cases using keywords, which map to corresponding functions or actions.
+Page Object Model (POM) is used to separate UI elements and interactions from the test script, promoting reusability and maintainability.
+Components:
+
+Test Data File: Contains the data sets for different test cases.
+Keyword File: Contains keywords that map to actions (e.g., click, enter text).
+Action Classes: Defines functions for each keyword or operation.
+Page Object Classes: Contains methods to interact with UI elements on each page.
+Test Runner: Controls the flow, reading data and keywords, and executing the corresponding actions.
+
+
+How Both Frameworks Work Together
+In a Hybrid Framework:
+
+The Data-Driven aspect allows the test to be executed with different sets of input data, read from an external file.
+The Keyword-Driven aspect allows the test case to be defined using a series of keywords that map to specific actions (e.g., enter text, click button).
+Page Object Model (POM) is used to create reusable methods for interacting with UI elements, reducing code duplication.
+The Test Runner loads data and keywords, maps the keywords to their respective functions, and executes them step-by-step.
+Additional features like screenshots and HTML reports can be included to track results and analyze test execution.

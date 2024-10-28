@@ -1,0 +1,16 @@
+Definition: A Data-Driven Framework is an automation testing approach in which test data is separated from the test scripts.
+This allows the same test script to run multiple times with different sets of data, making it easier to perform testing with various input combinations and conditions.
+
+How it Works:
+
+Test data is stored in an external file (e.g., Excel, CSV, JSON, Database).
+The script reads the input data from the external source and performs actions based on it.
+The same test script is executed with multiple data sets, without modifying the script logic.
+Results are logged, showing the success or failure of each input scenario.
+
+Components:
+
+Test Script: Contains the core logic of the automation (e.g., navigating to a website, performing actions, and validating results).
+Data File: External file (e.g., Excel or CSV) that contains the test data.
+Data Loader: A module that reads the data from the external source and feeds it to the test script.
+Test Runner: Executes the test script for each data set.
