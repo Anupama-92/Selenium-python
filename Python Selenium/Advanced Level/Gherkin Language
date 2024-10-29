@@ -52,3 +52,12 @@ And/But: Used to add multiple Given, When, or Then conditions in a scenario.
 Scenario Outline: Used to run the same scenario with different sets of data.
 Examples: Specifies the test data for the scenario outline.
 
+
+
+How Behave Executes the Scenario
+When you run Behave, it will:
+
+Read the feature file (e.g., features/login.feature).
+Parse each step in the scenario and look for a matching step definition in login_steps.py.
+Execute the matched step definition functions one by one.
+
